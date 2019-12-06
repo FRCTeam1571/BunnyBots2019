@@ -36,10 +36,6 @@ class George(wpilib.TimedRobot):
 
         self.intake = wpilib.Talon(1) #intake motor
 
-        '''self.door = wpilib.Talon(0) #Door motor'''
-        '''self.topSwitch = wpilib.DigitalInput(2) #top switch for door motor
-        self.bottomSwitch = wpilib.DigitalInput(1) #bottom switch for door motor'''
-
         # Talon SRX #
         # Right drivetrain 
         self.fr_motor = ctre.WPI_talonsrx.WPI_TalonSRX(2)
@@ -54,6 +50,10 @@ class George(wpilib.TimedRobot):
         # [Six wheels; four motors--one for each gearbox]
         # Class for driving the differential train
         self.drive = wpilib.drive.DifferentialDrive(self.left, self.right)
+
+        # Triggers/Controls
+        self.kLeft = controller.Hand.kLeft
+        self.kRight = controller.Hand.kRight
 
     def disabledInit(self):
         self.timer.reset()
@@ -75,10 +75,11 @@ class George(wpilib.TimedRobot):
     def teleopPeriodic(self):
         ''' During teleop '''
         ''' Called during operator control '''
-        self.TriggerLeft = self.controller.getTriggerAxis()
+        self.TriggerLeft = self.controller.getTriggerAxis(self.kLeft)
+        self.TriggerRight = self.controller.getTriggerAxis(self.kRight)
         
         while self.isOperatorControl() and self.isEnabled():
-            # blah blah
+            self.drive.arcadeDrive()
 
 if __name__ == "__main__":
     wpilib.run(robot.physics_enabled = True)
