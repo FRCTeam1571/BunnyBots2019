@@ -1,0 +1,8 @@
+Pin connections for right drivetrain:
+Front [Right] Motor for Talon Motor Controller (2)
+Rear [Right] Motor for Talon Motor Contoller (3)
+
+Pin connections for left drivetrain:
+Front [Left] Motor for Talon Motor Controller (0)
+Rear [Left] Motor for Talon Motor Controller (1)
+
