@@ -75,15 +75,19 @@ class George(wpilib.TimedRobot):
     def teleopPeriodic(self):
         ''' During teleop '''
         ''' Called during operator control '''
-        self.TriggerLeft = self.controller.getTriggerAxis(self.kLeft)
-        self.TriggerRight = self.controller.getTriggerAxis(self.kRight)
-
-        self.XLeftStick = self.controller.getX(Hand.kLeft)
-        #self.YLeftStick = self.controller.getY(Hand.kLeft)
-        
         
         while self.isOperatorControl() and self.isEnabled():
-            self.drive.arcadeDrive(self.TriggerRight, self.XLeftStick)
+            #Get trigger values and set the to find speed
+            self.TriggerLeft = self.controller.getTriggerAxis(self.kLeft)
+            self.TriggerRight = self.controller.getTriggerAxis(self.kRight)
+            self.speed = (self.TriggerRight - self.TriggerLeft) * 0.9
+
+            #Get rotation of the left stick
+            self.XLeftStick = self.controller.getX(Hand.kLeft) * 0.9
+            #self.YLeftStick = self.controller.getY(Hand.kLeft)
+
+            #Activate the motors
+            self.drive.arcadeDrive(self.speed, self.XLeftStick)
 
 if __name__ == "__main__":
     wpilib.run(robot.physics_enabled = True)
