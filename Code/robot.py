@@ -77,9 +77,13 @@ class George(wpilib.TimedRobot):
         ''' Called during operator control '''
         self.TriggerLeft = self.controller.getTriggerAxis(self.kLeft)
         self.TriggerRight = self.controller.getTriggerAxis(self.kRight)
+
+        self.XLeftStick = self.controller.getX(Hand.kLeft)
+        #self.YLeftStick = self.controller.getY(Hand.kLeft)
+        
         
         while self.isOperatorControl() and self.isEnabled():
-            self.drive.arcadeDrive()
+            self.drive.arcadeDrive(self.TriggerRight, self.XLeftStick)
 
 if __name__ == "__main__":
     wpilib.run(robot.physics_enabled = True)
