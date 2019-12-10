@@ -40,7 +40,7 @@ class George(wpilib.TimedRobot):
         # Right drivetrain 
         self.fr_motor = ctre.WPI_talonsrx.WPI_TalonSRX(2)
         self.rr_motor = ctre.wpi_talonsrx.WPI_TalonSRX(3)
-        self.right = wpilip.SpeedControllerGroup(self.fr_motor, self.rr_motor)
+        self.right = wpilib.SpeedControllerGroup(self.fr_motor, self.rr_motor)
 
         # # Left drivetrain
         self.fl_motor = ctre.wpi_talonsrx.WPI_TalonSRX(0) # 0
