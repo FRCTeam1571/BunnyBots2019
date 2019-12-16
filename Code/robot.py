@@ -81,5 +81,7 @@ class George(wpilib.TimedRobot):
         while self.isOperatorControl() and self.isEnabled():
             self.drive.arcadeDrive()
 
-if __name__ == "__main__":
-    wpilib.run(robot.physics_enabled = True)
+'''if __name__ == "__main__":
+    wpilib.run(robot.physics_enabled = True)'''
+if __name__ == '__main__':
+    wpilib.run(George)
