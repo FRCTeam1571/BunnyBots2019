@@ -11,21 +11,21 @@ Recommended  Setup:
 4. Install Python Extension  
 5. Install Python Linter  
 
-# Setup WPILib Extension
+## Setup WPILib Extension
 Search in Extensions for WPILib
 Click on install
 
-# Setup Python Virtual Environment
+## Setup Python Virtual Environment
     python3 -m venv venv  
     optional name: robotVenv
 
-# Activate Venv
+### Activate Venv
 > .\venv\Scripts\activate.bat
 
-# Deactivate Venv
+### Deactivate Venv
 > .\venv\Scripts\dectivate.bat
 
-# Install RobotPy
+## Install RobotPy
 Unzip the downloaded RobotPy zipfile on your computer (not on the roboRIO), and there should be an installer.py there. 
 - Open up a command line, 
 - Change directory to the installer location, and run this:  
@@ -39,16 +39,16 @@ Installing pyfrc will install all of the packages needed to help you write and t
 > py -3 -m pip install pyfrc
 * ***Inside VS Code, add `--user` option at end of command to execute with permission***
 
-# Install RobotPy-CTRE : motor controllers
+## Install RobotPy-CTRE : motor controllers
 Install robotpy-ctre Module
 Setup (tests/simulator)  
 > py -3 -m pip install -U robotpy-ctre  
 
 
-# Real Joystick support via pygame
+## Real Joystick support via pygame
 pip install pygame
 
-# Run Robot.py in WPILib
+## Run Robot.py in WPILib
     py -3 robot.py
     py -3 robot.py --help
 
@@ -62,7 +62,7 @@ Windows Setup:
 Run :
 > py -3 robot.py sim
 
-# Web Simulator
+## Web Simulator
 Install on Windows: 
 > pip3 install robotpy-websim  
 
@@ -81,10 +81,12 @@ Run:
 # Setup Unit Test Framework
 > pip3 --install PyTest
 
-# Run Unit Tests - py.test python testing tool
+## Run Unit Tests - py.test python testing tool
 Windows:  
 > py -3 robot.py test
 
 Built-in Tests to start with:
 > py -3 robot.py add-tests
 
+
+###
