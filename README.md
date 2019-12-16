@@ -1,11 +1,15 @@
-# BunnyBots2019
- BunnyBots 2019 Code
+# FRC Team 1571 BunnyBots 2019
+ BunnyBots 2019 Code. Offseason learning experience. Python RobotPy framework based code implementation. 6 wheel, 4 motor drivetrain. Rear wheels are omni-wheels.
 
-Install VScode
-Install Python
-Install Git
-Install Python Extension
-Install Python Linter
+- https://robotpy.readthedocs.io/en/stable/guide/index.html 
+- https://robotpy-websim.readthedocs.io/en/latest/physics-intro.html
+
+Recommended  Setup:  
+1. Install VScode  
+2. Install Python  
+3. Install Git  
+4. Install Python Extension  
+5. Install Python Linter  
 
 # Setup WPILib Extention
 Search in Extensions for WPILib
@@ -24,8 +28,10 @@ robotVenv
 # Install RobotPy
 Unzip the downloaded RobotPy zipfile on your computer (not on the roboRIO), and there should be an installer.py there. 
 - Open up a command line, 
-- Change directory to the installer location, and run this:
-> Windows:   py -3 installer.py install-robotpy
+- Change directory to the installer location, and run this:  
+
+Windows:  
+> py -3 installer.py install-robotpy
 
 
 # PyFRC install
@@ -80,5 +86,5 @@ Windows:
 > py -3 robot.py test
 
 Built-in Tests to start with:
-> Windows:   py -3 robot.py add-tests
+> py -3 robot.py add-tests
 
