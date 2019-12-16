@@ -17,9 +17,8 @@ import wpilib
 from wpilib import drive, Timer, SendableChooser
 import ctre
 from networktables import NetworkTables
-import funct
-
-import oi
+# import funct
+# import oi
 
 class George(wpilib.TimedRobot):
     
