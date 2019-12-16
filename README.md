@@ -11,19 +11,19 @@ Recommended  Setup:
 4. Install Python Extension  
 5. Install Python Linter  
 
-# Setup WPILib Extention
+# Setup WPILib Extension
 Search in Extensions for WPILib
 Click on install
 
 # Setup Python Virtual Environment
-python3 -m venv venv
-robotVenv
+    python3 -m venv venv  
+    optional name: robotVenv
 
 # Activate Venv
-.\venv\Scripts\activate.bat
+> .\venv\Scripts\activate.bat
 
 # Deactivate Venv
-.\venv\Scripts\dectivate.bat
+> .\venv\Scripts\dectivate.bat
 
 # Install RobotPy
 Unzip the downloaded RobotPy zipfile on your computer (not on the roboRIO), and there should be an installer.py there. 
