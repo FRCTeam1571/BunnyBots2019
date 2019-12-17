@@ -6,12 +6,13 @@
 
 Recommended  Setup:  
 1. Install VScode  
+https://github.com/wpilibsuite/allwpilib/releases 
 2. Install Python  
 3. Install Git  
 4. Install Python Extension  
 5. Install Python Linter  
 
-## Setup WPILib Extension
+## Setup WPILib Extension - separately if skipped
 Search in Extensions for WPILib
 Click on install
 
@@ -49,7 +50,7 @@ Setup (tests/simulator)
 pip install pygame
 
 ## Run Robot.py in WPILib
-    py -3 robot.py
+    py -3 robot.py run
     py -3 robot.py --help
 
 
@@ -85,8 +86,47 @@ Run:
 Windows:  
 > py -3 robot.py test
 
-Built-in Tests to start with:
-> py -3 robot.py add-tests
+Built-in Tests to start with (add tests/ use default tests from pyfrc):
+> py -3 robot.py add-tests  
+> py -3 .\robot.py --builtin
+
+## Code Coverage checks
+Check code coverage in you tests or with the simulator: 
+Windows:   
+> py -3 robot.py coverage test  
+> py -3 robot.py coverage sim
+
+## Run Unit Tests - Visual Studio Code
+- Configure - select pytest as testing framework
+- Select Test folder
+- Configure Test Runner  
+
+Verbose test, with printf statements passed to console:
+> pytest -v -s
+
+- pytest moduleName, myModule
+- pytest DirectoryName/, myDirectory/
+- pytest -k "expression"
+- pytest -m "expression", uses "pytest.mark" decorator
+- -v : verbose, -q : quiet, -s : don't capture console output, --ignore, --maxfail
+
+
+## Code Check
+> pip install --upgrade pyflakes  
+> py -3 -m pyflakes .   
+
+PyLint - install in VS Code
+
+## Check Git Setup
+> git config --list
+
+
+## vJOY - Virtual Joystick
+Bypass method to allow computer to control simulator without physical Xbox Controller or Joystick present.  
+- http://vjoystick.sourceforge.net/site/
+
+## UCR - Universal Control Remapper - Map Keyboard to HID Controller
+- https://github.com/snoothy/ucr/releases
 
 
 ###

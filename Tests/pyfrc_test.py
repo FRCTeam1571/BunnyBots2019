@@ -4,3 +4,7 @@
 '''
 
 from pyfrc.tests import *
+
+
+def test_pyfrc():
+        assert True 

@@ -19,6 +19,13 @@
 # object is created each time
 #
 
+#from wpilib import internal 
+#from pyfrc.tests import *
+#import math
+#import pytest
+#import pyfrc.tests
+
+
 
 def test_autonomous(control, fake_time, robot):
 

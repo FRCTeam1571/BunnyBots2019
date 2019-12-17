@@ -7,5 +7,5 @@ class DrivetrainTest:
     """A simple test class"""
     pass
 
-def test_drive(self):
-    assert True 
+    def drive_test(self):
+        assert True 
