@@ -74,7 +74,7 @@ class George(wpilib.TimedRobot):
         ''' During teleop '''
         ''' Called during operator control '''
         
-        self.drive.arcadeDrive()
+        self.drive.arcadeDrive(.1, .1)
 
 '''if __name__ == "__main__":
     wpilib.run(robot.physics_enabled = True)'''
