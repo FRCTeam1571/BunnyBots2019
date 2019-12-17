@@ -1,2 +1,10 @@
-/venv/*/
 *.pyc
+*.exe
+*.dll
+/venv/Include
+/venv/Lib
+/venv/tcl
+!/venv/Scripts/*activate*
+/venv/Scripts/opkg_cache
+/venv/Scripts/pip_cache
+/venv/LICENSE.txt
