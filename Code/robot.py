@@ -30,20 +30,20 @@ class George(wpilib.TimedRobot):
         self.controller = wpilib.XboxController(0)
         
         #Jay Programing
-        wpilib.CameraServer.launch("vision.py:main")
+        # wpilib.CameraServer.launch("vision.py:main")
         '''self.sortSwitch = wpilib.DigitalInput(0) #Switch to stop sorting motor''' # Input for potential switch
 
         self.intake = wpilib.Talon(1) #intake motor
 
         # Talon SRX #
         # Right drivetrain 
-        self.fr_motor = ctre.WPI_talonsrx.WPI_TalonSRX(2)
-        self.rr_motor = ctre.wpi_talonsrx.WPI_TalonSRX(3)
+        self.fr_motor = ctre.WPI_TalonSRX(2)
+        self.rr_motor = ctre.WPI_TalonSRX(3)
         self.right = wpilib.SpeedControllerGroup(self.fr_motor, self.rr_motor)
 
         # # Left drivetrain
-        self.fl_motor = ctre.wpi_talonsrx.WPI_TalonSRX(0) # 0
-        self.rl_motor = ctre.wpi_talonsrx.WPI_TalonSRX(1) # 1
+        self.fl_motor = ctre.WPI_TalonSRX(0) # 0
+        self.rl_motor = ctre.WPI_TalonSRX(1) # 1
         self.left = wpilib.SpeedControllerGroup(self.fl_motor, self.rl_motor)
 
         # [Six wheels; four motors--one for each gearbox]
@@ -51,13 +51,12 @@ class George(wpilib.TimedRobot):
         self.drive = wpilib.drive.DifferentialDrive(self.left, self.right)
 
         # Triggers/Controls
-        self.kLeft = controller.Hand.kLeft
-        self.kRight = controller.Hand.kRight
+        self.kLeft = self.controller.Hand.kLeft
+        self.kRight = self.controller.Hand.kRight
 
-    def disabledInit(self):
-        self.timer.reset()
-        self.timer.start()
-        pass
+    # def disabledInit(self):
+    #     self.timer.reset()
+    #     self.timer.start()
 
     def disabledPeriodic(self):
         pass
@@ -77,8 +76,7 @@ class George(wpilib.TimedRobot):
         self.TriggerLeft = self.controller.getTriggerAxis(self.kLeft)
         self.TriggerRight = self.controller.getTriggerAxis(self.kRight)
         
-        while self.isOperatorControl() and self.isEnabled():
-            self.drive.arcadeDrive()
+        self.drive.arcadeDrive()
 
 '''if __name__ == "__main__":
     wpilib.run(robot.physics_enabled = True)'''
