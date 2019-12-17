@@ -55,3 +55,4 @@ class MyRobot(wpilib.SampleRobot):
 
 if __name__ == "__main__":
     wpilib.run(MyRobot)
+    #wpilib.run(MyRobot, a="test")
