@@ -11,6 +11,7 @@ https://github.com/wpilibsuite/allwpilib/releases
 3. Install Git  
 4. Install Python Extension  
 5. Install Python Linter  
+6. Install GitLens
 
 ## Setup WPILib Extension - separately if skipped
 Search in Extensions for WPILib
