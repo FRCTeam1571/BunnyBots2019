@@ -37,13 +37,8 @@ class George(wpilib.TimedRobot):
 
         # Talon SRX #
         # Right drivetrain 
-<<<<<<< HEAD
-        self.fr_motor = ctre.WPI_talonsrx.WPI_TalonSRX(2)
-        self.rr_motor = ctre.wpi_talonsrx.WPI_TalonSRX(3)
-=======
         self.fr_motor = ctre.WPI_TalonSRX(2)
         self.rr_motor = ctre.WPI_TalonSRX(3)
->>>>>>> 494ed2793840d3d331d54b12b77d315240f147cc
         self.right = wpilib.SpeedControllerGroup(self.fr_motor, self.rr_motor)
 
         # # Left drivetrain
@@ -79,22 +74,7 @@ class George(wpilib.TimedRobot):
         ''' During teleop '''
         ''' Called during operator control '''
         
-<<<<<<< HEAD
-        while self.isOperatorControl() and self.isEnabled():
-            #Get trigger values and set the to find speed
-            self.TriggerLeft = self.controller.getTriggerAxis(self.kLeft)
-            self.TriggerRight = self.controller.getTriggerAxis(self.kRight)
-            self.speed = (self.TriggerRight - self.TriggerLeft) * 0.9
-
-            #Get rotation of the left stick
-            self.XLeftStick = self.controller.getX(Hand.kLeft) * 0.9
-            #self.YLeftStick = self.controller.getY(Hand.kLeft)
-
-            #Activate the motors
-            self.drive.arcadeDrive(self.speed, self.XLeftStick)
-=======
         self.drive.arcadeDrive()
->>>>>>> 494ed2793840d3d331d54b12b77d315240f147cc
 
 '''if __name__ == "__main__":
     wpilib.run(robot.physics_enabled = True)'''
