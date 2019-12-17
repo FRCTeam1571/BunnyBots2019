@@ -1,6 +1,6 @@
 from cscore import CameraServer
 
-# Defines a function to get the instances for the canmera/network
+# Defines a function to get the instances for the camera/network
 def main():
     cs = CameraServer.getInstance()
     cs.enableLogging()
