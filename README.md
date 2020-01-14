@@ -126,8 +126,13 @@ PyLint - install in VS Code
 Bypass method to allow computer to control simulator without physical Xbox Controller or Joystick present.  
 - http://vjoystick.sourceforge.net/site/
 
-## UCR - Universal Control Remapper - Map Keyboard to HID Controller
-- https://github.com/snoothy/ucr/releases
+## Interception
+Driver to capture keyboard key presses so that they can be mapped to a virtual joystick defined by vJOY
+https://www.oblita.com/interception.html
 
+## UCR - Universal Control Remapper - Map Keyboard to HID Controller
+Map keyboard key presses passed by Interception to vJOY Joystick controls. While running, keyboard keys can send Joystick values to the RoboPy simulator
+- https://github.com/snoothy/ucr/releases
+- https://github.com/Snoothy/UCR/wiki/Getting-Started
 
 ###

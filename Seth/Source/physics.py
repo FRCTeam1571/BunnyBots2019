@@ -47,8 +47,8 @@ class PhysicsEngine(object):
         """
 
         # Simulate the drivetrain
-        lr_motor = hal_data["pwm"][1]["value"]
-        rr_motor = hal_data["pwm"][2]["value"]
+        lr_motor = hal_data["pwm"][0]["value"]
+        rr_motor = hal_data["pwm"][0]["value"] * 0.25
 
         # Not needed because front and rear should be in sync
         # lf_motor = hal_data['pwm'][3]['value']

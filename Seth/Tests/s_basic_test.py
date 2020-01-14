@@ -76,7 +76,7 @@ def test_operator_control(control, robot, hal_data):
             """
             self.step_count += 1
 
-            pwm_val = hal_data["pwm"][8]["value"]
+            pwm_val = hal_data["pwm"][0]["value"]
             if pwm_val is not None:
 
                 # motor value is equal to the previous value of the stick
